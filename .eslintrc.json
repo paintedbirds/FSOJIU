@@ -1,0 +1,26 @@
+{
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier" // NOTE: Add "prettier" last. This will turn off eslint rules conflicting with prettier. This is not what will format our code.
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "react/react-in-jsx-scope": "off",
+    "no-console": "warn",
+    "indent": ["error", 2],
+    "semi": ["error", "always"],
+    "no-extra-semi": "error",
+    "no-trailing-spaces": "error",
+    "no-empty": "error",
+    "comma-spacing": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "prefer-const": "error",
+    "prefer-template": "error",
+    "no-useless-return": "error",
+    "no-else-return": "error",
+    "no-self-assign": "error"
+  }
+}
