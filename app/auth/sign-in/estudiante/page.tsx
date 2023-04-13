@@ -28,6 +28,7 @@ export default function LoginPage() {
 
   const onSubmit = () => {
     setLoginError('');
+    // TODO: add logic
   };
 
   return (

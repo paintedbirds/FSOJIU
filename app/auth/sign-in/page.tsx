@@ -19,7 +19,7 @@ export default function LoginPage() {
 
   return (
     <main>
-      <VStack gap={5} paddingX="5rem" paddingY="8rem">
+      <VStack gap={5} paddingX={{ sm: '5rem', base: '1rem' }} paddingY={{lg:"8rem", base:"3rem"}}>
         <VStack justify="center" textAlign="center" gap="5">
           <Image src={LogoFSOJIU} alt="Logo FSOJIU" />
           <Box>
