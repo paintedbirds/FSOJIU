@@ -13,9 +13,13 @@ export default function LoginPage() {
     router.push('/auth/sign-in/usuario');
   };
 
+  const onLoginStudent = () => {
+    router.push('/auth/sign-in/estudiante');
+  };
+
   return (
     <main>
-      <VStack gap={5}>
+      <VStack gap={5} paddingX="5rem" paddingY="8rem">
         <VStack justify="center" textAlign="center" gap="5">
           <Image src={LogoFSOJIU} alt="Logo FSOJIU" />
           <Box>
@@ -50,6 +54,7 @@ export default function LoginPage() {
             width="full"
             variant="outline"
             fontSize={16}
+            onClick={onLoginStudent}
           >
             Entrar como estudiante
           </Button>

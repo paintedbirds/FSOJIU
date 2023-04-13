@@ -21,16 +21,9 @@ export default function LoginLayout({ children }: LoginLayoutProps) {
           width="100%"
           zIndex="-1"
         />
-        <Flex maxWidth="87vw" width="70vw" justify="flex-end" marginY="auto">
-          <VStack
-            background="white"
-            borderRadius="md"
-            paddingX="5rem"
-            paddingY="8rem"
-            width={500}
-            height={600}
-          >
-            {children}
+        <Flex maxWidth="87vw" width="90vw" justify="flex-end" marginY="auto">
+          <VStack background="white" borderRadius="md" width={500} height={600}>
+            <Flex width="100%" height="100%" align="center">{children}</Flex>
           </VStack>
         </Flex>
       </Container>
