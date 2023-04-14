@@ -23,17 +23,23 @@ export default function LoginLayout({ children }: LoginLayoutProps) {
         />
         <Flex
           maxWidth="87vw"
-          minWidth={{ sm: '87vw', base: '100vw' }}
+          minWidth={{ sm: '80vw', base: '100vw' }}
           justify="flex-end"
-          margin={{md: "auto", base: "auto 0 0 0"}}
+          margin={{ md: 'auto', base: 'auto 0 0 0' }}
         >
           <VStack
             background="white"
             borderRadius="md"
-            width={{ md: 500, base: '100%' }}
-            height={{xl:600, lg: 500}}
+            width={{ lg: 500, md: 400, base: '100%' }}
+            height={{ xl: 600, lg: 500 }}
           >
-            <Flex width="100%" height="100%" align="center">
+            <Flex
+              width="100%"
+              align="center"
+              height={{ md: '100%', base: '85vh' }}
+              paddingX={{ sm: '5rem', base: '3rem' }}
+              paddingY={{ lg: '8rem', md: '5rem', base: '4rem' }}
+            >
               {children}
             </Flex>
           </VStack>

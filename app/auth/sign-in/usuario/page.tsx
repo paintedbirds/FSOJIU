@@ -40,11 +40,9 @@ export default function LoginPage() {
   const { handleSubmit, register, formState } = useForm<LoginFormValues>({
     resolver: zodResolver(loginFormSchema),
   });
-  const router = useRouter();
-
-  const toast = useToast();
-
   const [loginError, setLoginError] = useState('');
+  const router = useRouter();
+  const toast = useToast();
 
   const onSubmit = async ({ username, password }: LoginFormValues) => {
     setLoginError('');
@@ -83,14 +81,7 @@ export default function LoginPage() {
 
   return (
     <main>
-      <VStack
-        width="100%"
-        align="flex-start"
-        height="100%"
-        paddingX="3.5rem"
-        justifyContent="space-between"
-        gap={6}
-      >
+      <VStack justify="space-between" align="flex-start" gap={4}>
         <Link
           href="/auth/sign-in"
           style={{ textDecoration: 'none', color: 'rgba(0, 0, 0, 0.5)' }}
@@ -128,7 +119,7 @@ export default function LoginPage() {
         </Box>
 
         <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%' }}>
-          <VStack width="100%" gap={3}>
+          <VStack width="100%" gap={{ md: 3, base: 1 }}>
             <FormControl isInvalid={Boolean(formState.errors.username)}>
               <FormLabel fontWeight={700}>Correo electronico*</FormLabel>
               <InputGroup>
@@ -175,7 +166,7 @@ export default function LoginPage() {
             size="lg"
             width="full"
             type="submit"
-            marginTop="3rem"
+            marginTop={{ lg: '3rem', base: '2rem' }}
           >
             Iniciar sesión
           </Button>

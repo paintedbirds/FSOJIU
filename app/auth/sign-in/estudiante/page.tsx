@@ -33,14 +33,7 @@ export default function LoginPage() {
 
   return (
     <main>
-      <VStack
-        width="100%"
-        align="flex-start"
-        height="100%"
-        paddingX="3.5rem"
-        justifyContent="space-between"
-        gap={6}
-      >
+      <VStack justify="space-between" align="flex-start" gap={4}>
         <Link
           href="/auth/sign-in"
           style={{ textDecoration: 'none', color: 'rgba(0, 0, 0, 0.5)' }}
@@ -78,7 +71,7 @@ export default function LoginPage() {
         </Box>
 
         <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%' }}>
-          <VStack width="100%" gap={3}>
+          <VStack width="100%">
             <FormControl isInvalid={Boolean(formState.errors.ci)}>
               <FormLabel fontWeight={700}>C.I*</FormLabel>
               <InputGroup>
