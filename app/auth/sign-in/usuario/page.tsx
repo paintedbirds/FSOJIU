@@ -16,7 +16,7 @@ import {
   Flex,
   Box,
 } from '@chakra-ui/react';
-
+import { ArrowBackIcon, EmailIcon, LockIcon } from '@chakra-ui/icons';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -24,7 +24,6 @@ import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
 import { DASHBOARD_HOME_PATH } from '@/utils/constants';
-import { ArrowBackIcon, EmailIcon, LockIcon } from '@chakra-ui/icons';
 
 interface LoginFormValues {
   username: string;
@@ -121,10 +120,10 @@ export default function LoginPage() {
         <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%' }}>
           <VStack width="100%" gap={{ md: 3, base: 1 }}>
             <FormControl isInvalid={Boolean(formState.errors.username)}>
-              <FormLabel fontWeight={700}>Correo electronico*</FormLabel>
+              <FormLabel fontWeight={700}>Nombre de usuario*</FormLabel>
               <InputGroup>
                 <Input
-                  placeholder="Ingresa tu correo"
+                  placeholder="Ingrese su nombre de usuario"
                   id="username"
                   {...register('username')}
                 />
@@ -133,7 +132,7 @@ export default function LoginPage() {
                 </InputRightAddon>
               </InputGroup>
               <FormErrorMessage>
-                Ingrese su correo para continuar
+                Ingrese su nombre de usuario para continuar
               </FormErrorMessage>
             </FormControl>
             <FormControl isInvalid={Boolean(formState.errors.password)}>

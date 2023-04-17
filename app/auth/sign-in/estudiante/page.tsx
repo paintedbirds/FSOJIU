@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import {
   FormControl,
   FormLabel,
@@ -14,12 +15,10 @@ import {
   Flex,
   Box,
 } from '@chakra-ui/react';
-
+import { ArrowBackIcon } from '@chakra-ui/icons';
 import { useForm } from 'react-hook-form';
 
-import { ArrowBackIcon } from '@chakra-ui/icons';
 import { IdentificationIcon } from '@/assets/identification-icon';
-import { useState } from 'react';
 
 export default function LoginPage() {
   const { handleSubmit, register, formState } = useForm();
